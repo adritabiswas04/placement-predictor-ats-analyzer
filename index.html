@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Placement Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="form-bg center">
+
+<div class="box">
+<h2>🎓 Placement Predictor</h2>
+
+<form action="/predict" method="post">
+<input name="cgpa" placeholder="CGPA">
+<input name="internships" placeholder="Internships">
+<input name="projects" placeholder="Projects">
+<input name="skills" placeholder="Skills (1-5)">
+<button>Predict</button>
+</form>
+
+<a href="/">← Back</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ATS Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="result-bg">
+
+<div class="box" style="width:600px; margin:50px auto;">
+
+<h2>📊 ATS Analysis Result</h2>
+
+<!-- ATS SCORE -->
+<p><b>ATS Score:</b> {{ data.ats_score }}%</p>
+
+<div class="progress">
+    <div class="fill" style="width: {{ data.ats_score }}%"></div>
+</div>
+
+<br>
+
+<!-- JD MATCH -->
+<p><b>JD Match:</b> {{ data.similarity }}%</p>
+
+<br>
+
+<!-- SKILLS -->
+<h3>✅ Resume Skills</h3>
+<ul>
+{% for skill in data.resume_skills %}
+    <li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+<!-- MISSING -->
+<h3>❌ Missing Skills</h3>
+<ul>
+{% for skill in data.missing_skills %}
+    <li>{{ skill }}</li>
+{% endfor %}
+</ul>
+
+<!-- SUGGESTIONS -->
+<h3>💡 Suggestions</h3>
+<ul>
+{% for s in data.suggestions %}
+    <li>{{ s }}</li>
+{% endfor %}
+</ul>
+
+<br>
+
+<!-- BUTTONS -->
+<a href="/resume" class="back-btn">← Analyze Again</a>
+<br><br>
+<a href="/" class="back-btn">🏠 Back to Home</a>
+
+</div>
+
+</body>
+</html>

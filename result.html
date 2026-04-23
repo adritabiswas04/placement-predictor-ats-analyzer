@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="result-bg center">
+
+<div class="box">
+
+    <h2>Prediction Result</h2>
+
+    <h1>{{ result }}</h1>
+
+    <p><b>{{ prob }}% chance</b></p>
+
+    <!-- Color Logic -->
+    {% if prob > 75 %}
+        {% set bar_class = "fill green" %}
+    {% elif prob > 50 %}
+        {% set bar_class = "fill yellow" %}
+    {% else %}
+        {% set bar_class = "fill red" %}
+    {% endif %}
+
+    <!-- Progress Bar -->
+    <div class="progress">
+        <div class="{{ bar_class }}" style="width: {{ prob }}%;"></div>
+    </div>
+
+    <br>
+    <a href="/">← Home</a>
+
+</div>
+
+</body>
+</html>

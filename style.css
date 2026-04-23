@@ -1,0 +1,124 @@
+/* GLOBAL */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+}
+
+/* CENTER ALIGN */
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* BOX / CARD */
+.box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* BUTTON */
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #43cea2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2bbd8e;
+}
+
+/* INPUT */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+/* BACKGROUNDS */
+.home-bg {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+}
+
+.form-bg {
+    background: linear-gradient(135deg,#43cea2,#185a9d);
+}
+
+.resume-bg {
+    background: linear-gradient(135deg,#ff7e5f,#feb47b);
+}
+
+.result-bg {
+    background: #eef2ff;
+}
+
+/* REMOVE BLUE LINK COLOR */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* HOME CARDS */
+.card {
+    display: inline-block;
+    padding: 30px;
+    margin: 20px;
+    width: 250px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    text-align: center;
+    color: white; 
+}
+
+.card h3,
+.card p {
+    color: white; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* PROGRESS BAR */
+.progress {
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    width: 0%;
+    border-radius: 10px;
+    background: linear-gradient(to right,#43cea2,#185a9d);
+    transition: width 1s ease-in-out;
+}
+
+/* COLORS */
+.fill.green {
+    background: linear-gradient(to right, #00c853, #64dd17);
+}
+
+.fill.yellow {
+    background: linear-gradient(to right, #ff9800, #ffc107);
+}
+
+.fill.red {
+    background: linear-gradient(to right, #ff5252, #ff1744);
+}
